@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String? titulo;
+
     return MaterialApp(
+      title: titulo = 'QuizApp',
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       home: PerguntaApp(),
