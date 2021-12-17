@@ -6,47 +6,51 @@ import 'package:quiz_app/resultado_final.dart';
 
 class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
+  int pontuacaoTotal = 0;
   final _perguntas = const [
     {
       'texto': 'Qual gatinho é o mais brincalhão?',
       'respostas': [
-        {'texto': 'Shenon', 'nota': 10},
-        {'texto': 'Shenon', 'nota': 7},
-        {'texto': 'Shanito', 'nota': 5},
+        {'texto': 'Shenon', 'pontuacao': 10},
+        {'texto': 'Shena', 'pontuacao': 7},
+        {'texto': 'Shanito', 'pontuacao': 5},
       ],
     },
     {
       'texto': 'Qual a personalidade do Shenon?',
       'respostas': [
-        {'texto': 'Brincalhão', 'nota': 10},
-        {'texto': 'Carinhoso', 'nota': 7},
-        {'texto': 'Fofinho', 'nota': 5},
+        {'texto': 'Brincalhão', 'pontuacao': 10},
+        {'texto': 'Carinhoso', 'pontuacao': 7},
+        {'texto': 'Fofinho', 'pontuacao': 5},
       ],
     },
     {
       'texto': 'Qual a personalidade da Shena?',
       'respostas': [
-        {'texto': 'Fofinha', 'nota': 10},
-        {'texto': 'Brincalhona', 'nota': 7},
-        {'texto': 'Briguenta', 'nota': 5},
+        {'texto': 'Fofinha', 'pontuacao': 10},
+        {'texto': 'Brincalhona', 'pontuacao': 7},
+        {'texto': 'Briguenta', 'pontuacao': 5},
       ],
     },
     {
       'texto': 'Qual a comida preferida do Shanito?',
       'respostas': [
-        {'texto': 'Tudo', 'nota': 10},
-        {'texto': 'Sachê', 'nota': 7},
-        {'texto': 'Ração', 'nota': 5},
+        {'texto': 'Tudo', 'pontuacao': 10},
+        {'texto': 'Sachê', 'pontuacao': 7},
+        {'texto': 'Ração', 'pontuacao': 5},
       ],
     }
   ];
 
-  void _responder() {
+  void _responder(int pontuacao) {
     if (temPerguntaSelecionada) {
       setState(() {
         _perguntaSelecionada++;
+        pontuacaoTotal += pontuacao;
       });
     }
+
+    print(pontuacaoTotal);
   }
 
   bool get temPerguntaSelecionada {
@@ -69,7 +73,9 @@ class _PerguntaAppState extends State<PerguntaApp> {
                 responder: _responder,
                 perguntaSelecionada: _perguntaSelecionada,
               )
-            : const Resultado(),
+            : Resultado(
+                pontuacao: pontuacaoTotal,
+              ),
       ),
     );
   }
