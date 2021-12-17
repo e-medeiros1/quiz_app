@@ -12,7 +12,7 @@ class Questionario extends StatelessWidget {
 
   final List<Map<String, Object>> perguntas;
   final int perguntaSelecionada;
-  final void Function() responder;
+  final void Function(int) responder;
 
   //Verifica se possui uma pergunta selecionada
   bool get temPerguntaSelecionada {
@@ -27,10 +27,13 @@ class Questionario extends StatelessWidget {
     return Column(
       children: [
         Questao(texto: perguntas[perguntaSelecionada]['texto'].toString()),
-        ...respostas
-            .map((resp) => Resposta(
-                resposta: resp['texto'].toString(), onSelected: responder))
-            .toList(),
+        ...respostas.map((resp) {
+          return Resposta(
+            resposta: resp['texto'].toString(),
+            onSelected: () =>
+                responder(int.parse(resp['pontuacao'].toString())),
+          );
+        }).toList(),
       ],
     );
   }
