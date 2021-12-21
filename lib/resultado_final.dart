@@ -33,16 +33,17 @@ class Resultado extends StatelessWidget {
         Center(child: Text(fraseResultado, style: TextStyle(fontSize: 35))),
         Container(
           padding: EdgeInsets.fromLTRB(0, 200, 0, 0),
-          child: TextButton(
+          child: OutlinedButton(
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.blue),
-              side: MaterialStateProperty.all(
-                  BorderSide(style: BorderStyle.solid)),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              )),
+              overlayColor: MaterialStateProperty.all(Colors.blue),
             ),
             onPressed: quandoReiniciado,
             child: Text(
               'Jogar novamente?',
-              style: TextStyle(fontSize: 25, color: Colors.white),
+              style: TextStyle(fontSize: 25, color: Colors.black),
             ),
           ),
         ),
