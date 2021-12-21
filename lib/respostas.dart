@@ -11,11 +11,14 @@ class Resposta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      padding: EdgeInsets.all(5),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: Colors.blue,
-        ),
+            primary: Colors.blue,
+            minimumSize: Size(300, 40),
+            textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30))),
         child: Text(
           resposta,
           style: TextStyle(
