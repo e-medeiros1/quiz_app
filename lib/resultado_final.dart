@@ -32,13 +32,19 @@ class Resultado extends StatelessWidget {
         Text('$pontuacao', style: TextStyle(fontSize: 70)),
         Center(child: Text(fraseResultado, style: TextStyle(fontSize: 35))),
         Container(
-          padding: EdgeInsets.fromLTRB(0, 300, 0, 0),
+          padding: EdgeInsets.fromLTRB(0, 200, 0, 0),
           child: TextButton(
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue)),
-              onPressed: quandoReiniciado,
-              child: Text('Jogar novamente?',
-                  style: TextStyle(fontSize: 25, color: Colors.white))),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.blue),
+              side: MaterialStateProperty.all(
+                  BorderSide(style: BorderStyle.solid)),
+            ),
+            onPressed: quandoReiniciado,
+            child: Text(
+              'Jogar novamente?',
+              style: TextStyle(fontSize: 25, color: Colors.white),
+            ),
+          ),
         ),
       ],
     );
