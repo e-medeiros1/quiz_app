@@ -8,12 +8,11 @@ class Questao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.all(20),
+      margin: const EdgeInsets.fromLTRB(30, 0, 30, 50),
       child: Center(
         child: Text(
           texto,
-          style: const TextStyle(fontSize: 30),
+          style: const TextStyle(fontSize: 40),
         ),
       ),
     );
