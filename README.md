@@ -27,4 +27,11 @@ Rework dos botões e posicionamento do texto da questão na tela
 
 ![image](https://user-images.githubusercontent.com/73318684/146860825-31f7eb20-d664-40a6-b12f-1679efa365d5.png)
 
+### Versão 1.0.2
+
+Alteração no tamanho do texto do resultado final, troca do botão de renicio e mudança em uma das questões
+
+![image](https://user-images.githubusercontent.com/73318684/146966159-40492a1d-ad84-4ec5-b058-6b6215ec0470.png)
+
+
 
