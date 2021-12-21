@@ -9,11 +9,11 @@ class _PerguntaAppState extends State<PerguntaApp> {
   int pontuacaoTotal = 0;
   final _perguntas = const [
     {
-      'texto': 'Qual gatinho é o mais brincalhão?',
+      'texto': 'Qual gatinho é o mais atrapalhado?',
       'respostas': [
         {'texto': 'Shenon', 'pontuacao': 10},
-        {'texto': 'Shena', 'pontuacao': 7},
-        {'texto': 'Shanito', 'pontuacao': 5},
+        {'texto': 'Shanito', 'pontuacao': 7},
+        {'texto': 'Shena', 'pontuacao': 5},
       ],
     },
     {
