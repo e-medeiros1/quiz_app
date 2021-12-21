@@ -21,6 +21,20 @@ class Resultado extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(fraseResultado, style: TextStyle(fontSize: 35)));
+    return Column(
+      children: [
+        Spacer(),
+        Center(
+            child: Text('Sua pontuação foi: $pontuacao',
+                style: TextStyle(fontSize: 35))),
+        Center(
+          child: Text(
+            fraseResultado,
+            style: TextStyle(fontSize: 35),
+          ),
+        ),
+        Spacer(),
+      ],
+    );
   }
 }
