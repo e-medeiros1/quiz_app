@@ -11,11 +11,11 @@ class Resultado extends StatelessWidget {
   final void Function() quandoReiniciado;
 
   String get fraseResultado {
-    if (pontuacao < 21) {
-      return 'Você concluiu, mas não foi o suficiente!';
-    } else if (pontuacao < 26) {
+    if (pontuacao < 25) {
+      return 'Fim, mas não foi o suficiente!';
+    } else if (pontuacao < 30) {
       return 'Você é bom!';
-    } else if (pontuacao < 32) {
+    } else if (pontuacao < 37) {
       return 'Impressionante!';
     } else {
       return 'Nível Jedi!';
@@ -28,9 +28,9 @@ class Resultado extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
-            child: Text('Sua pontuação foi', style: TextStyle(fontSize: 35))),
+            child: Text('Sua pontuação foi', style: TextStyle(fontSize: 33))),
         Text('$pontuacao', style: TextStyle(fontSize: 70)),
-        Center(child: Text(fraseResultado, style: TextStyle(fontSize: 35))),
+        Center(child: Text(fraseResultado, style: TextStyle(fontSize: 33))),
         Container(
           padding: EdgeInsets.fromLTRB(0, 200, 0, 0),
           child: OutlinedButton(
