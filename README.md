@@ -21,3 +21,10 @@ AppQuiz finalizado, segue a padronagem da versão anterior e agora com uma tela 
 ![image](https://user-images.githubusercontent.com/73318684/146857349-4f38f32e-3123-4acd-9a3b-251c35e9d88d.png)
 ![image](https://user-images.githubusercontent.com/73318684/146856985-28ea4df5-5c95-4c5d-9d34-0565ce8f0d89.png)
 
+### Versão 1.0.1
+
+Rework dos botões e posicionamento do texto da questão na tela
+
+![image](https://user-images.githubusercontent.com/73318684/146860825-31f7eb20-d664-40a6-b12f-1679efa365d5.png)
+
+
